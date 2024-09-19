@@ -1,2 +1,5 @@
-# Flutter_Batch8
-This is a repository which contains all the practice and assignment of ostad platform for batch 8
+# 🚀 Flutter App Development Repository
+
+Welcome to my **Flutter App Development** repository! This is where I practice and store various Flutter projects, from simple apps to more complex ones, as I explore and enhance my Flutter development skills.
+
+---
