@@ -66,6 +66,7 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
         children: [
           TextFormField(
             controller: _nameTEController,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: const InputDecoration(
               hintText: 'Name',
               labelText: 'Product Name',
@@ -81,6 +82,7 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
           ),
           TextFormField(
             controller: _priceTEController,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: const InputDecoration(
               hintText: 'Price',
               labelText: 'Product Price',
@@ -96,6 +98,7 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
           ),
           TextFormField(
             controller: _totalPriceTEController,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: const InputDecoration(
               hintText: 'Total Price',
               labelText: 'Product Total Price',
@@ -111,6 +114,7 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
           ),
           TextFormField(
             controller: _quantityTEController,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: const InputDecoration(
               hintText: 'Quantity',
               labelText: 'Product Quantity',
@@ -126,6 +130,7 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
           ),
           TextFormField(
             controller: _codeTEController,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: const InputDecoration(
               hintText: 'Code',
               labelText: 'Product Code',
@@ -141,6 +146,7 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
           ),
           TextFormField(
             controller: _imageTEController,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: const InputDecoration(
               hintText: 'Image URL',
               labelText: 'Product Image',
