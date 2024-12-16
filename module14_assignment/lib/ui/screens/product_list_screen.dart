@@ -35,27 +35,42 @@ class _ProductListScreenState extends State<ProductListScreen> {
 
       appBar: AppBar(
         title: const Text('Product List'),
+        
+        actions: [
+          IconButton(
+            onPressed: (){
+              _getProductList();
+            },
+            icon: Icon(Icons.refresh),
+          ),
+          
+        ],
       ),
 
-      body: Visibility(
-        visible: _getProductListInProgress ==false,
-        replacement: Center(
-          child: CircularProgressIndicator(),
-        ),
-        child: ListView.builder(
-
-
-          itemCount: productlist.length,
-
-          itemBuilder: (context, index){
-
-            return ProductItem(
-
-              product: productlist[index],
-            );
-
-          },
-
+      body: RefreshIndicator(
+        onRefresh: () async{
+          _getProductList();
+        },
+        child: Visibility(
+          visible: _getProductListInProgress ==false,
+          replacement: Center(
+            child: CircularProgressIndicator(),
+          ),
+          child: ListView.builder(
+        
+        
+            itemCount: productlist.length,
+        
+            itemBuilder: (context, index){
+        
+              return ProductItem(
+        
+                product: productlist[index],
+              );
+        
+            },
+        
+          ),
         ),
       ) ,
 
@@ -73,6 +88,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
   }
 
   Future<void> _getProductList() async {
+    productlist.clear();
     _getProductListInProgress = true;
     setState(() {
 
