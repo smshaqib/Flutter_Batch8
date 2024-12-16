@@ -36,17 +36,24 @@ class _ProductListScreenState extends State<ProductListScreen> {
         backgroundColor: Colors.white,
         surfaceTintColor: Colors.white,
         actions: [
-          IconButton(
+          FloatingActionButton(
               onPressed: () {
                 _getProuctList();
                 setState(() {});
               },
-              icon: const Icon(Icons.refresh)),
-          IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, AddProductScreen.name);
-              },
-              icon: const Icon(Icons.add_box_outlined)),
+            child: Icon(Icons.refresh),
+            backgroundColor: Colors.white54,
+          ),
+
+          FloatingActionButton(
+            onPressed: () {
+            Navigator.pushNamed(context, AddProductScreen.name);
+            },
+
+              child: Icon(Icons.add),
+            backgroundColor: Colors.white54,
+          )
+
         ],
       ),
       body: Padding(
