@@ -22,6 +22,20 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
   final TextEditingController _imageTEController = TextEditingController();
   final TextEditingController _codeTEController = TextEditingController();
 
+
+  @override
+  void initState() {
+
+    super.initState();
+    _nameTEController.text = widget.product.productName ?? '';
+    _priceTEController.text = widget.product.productName ?? '';
+    _totalPriceTEController.text = widget.product.productName ?? '';
+    _quantityTEController.text = widget.product.productName ?? '';
+    _imageTEController.text = widget.product.productName ?? '';
+    _codeTEController.text = widget.product.productName ?? '';
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -139,13 +153,21 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
 
           const SizedBox(height: 16,),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){
+
+              _updateProduct();
+            },
             child: const Text('Update Product'),
           ),
         ],
 
       ),
     );
+  }
+
+  Future<void> _updateProduct() async{
+
+
   }
 
   @override
