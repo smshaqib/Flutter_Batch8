@@ -83,6 +83,7 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
           TextFormField(
             controller: _priceTEController,
             autovalidateMode: AutovalidateMode.onUserInteraction,
+            keyboardType: TextInputType.number,
             decoration: const InputDecoration(
               hintText: 'Price',
               labelText: 'Product Price',
@@ -99,6 +100,7 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
           TextFormField(
             controller: _totalPriceTEController,
             autovalidateMode: AutovalidateMode.onUserInteraction,
+            keyboardType: TextInputType.number,
             decoration: const InputDecoration(
               hintText: 'Total Price',
               labelText: 'Product Total Price',
@@ -115,6 +117,7 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
           TextFormField(
             controller: _quantityTEController,
             autovalidateMode: AutovalidateMode.onUserInteraction,
+            keyboardType: TextInputType.number,
             decoration: const InputDecoration(
               hintText: 'Quantity',
               labelText: 'Product Quantity',
