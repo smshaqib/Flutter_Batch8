@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
+import 'package:module14_assignment/ui/screens/delete_product.dart';
 import 'package:module14_assignment/ui/screens/update_product_screen.dart';
 
 import '../../models/product.dart';
@@ -25,16 +27,24 @@ class ProductItem extends StatelessWidget {
           Text('Price:  ${product.unitPrice}'),
           Text('Total:  ${product.totalPrice}'),
 
-
-
-
         ],
 
       ),
 
       trailing: Wrap(
         children: [
-          IconButton(onPressed: (){}, icon: const Icon(Icons.delete),),
+          IconButton(onPressed: (){
+
+            deleteProduct(context, product.id!);
+
+          },
+
+            icon: Icon(Icons.delete),
+
+          ),
+
+
+
           IconButton(
             onPressed: (){
               Navigator.pushNamed(context, UpdateProductScreen.name, arguments: product);

@@ -229,6 +229,7 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
 
   }
 
+
   @override
   void dispose() {
 
