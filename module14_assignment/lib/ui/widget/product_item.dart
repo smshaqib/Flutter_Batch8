@@ -50,7 +50,7 @@ class ProductItem extends StatelessWidget {
             ),
           ],
         ),
-        tileColor: Colors.white,
+        tileColor: Colors.amber,
       ),
     );
   }
